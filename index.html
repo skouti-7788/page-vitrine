@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
     <link rel="icon" href="image.ico">
     <title>Ecol Jassani</title>
 </head>
 <body>
-
+    <div class="page-content">
     <nav class="navbar" id="navbar">
         <div class="navbar-inner">
             <a class="brand" href="#">
@@ -17,6 +18,7 @@
                 </div>
                 <h1>École Jassani</h1>
             </a>
+            <h3 class="cotrol">///</h3>
             <ul class="menu">
                 <li >Maternelle</li>
                 <li>Primaire</li>
@@ -31,7 +33,7 @@
             <span class="image-box-badge"> Bienvenue</span>
             <h2>Un lieu où chaque<br>enfant s'épanouit</h2>
             <p>Bienvenue à l'école Jassani, une institution dédiée à offrir une éducation de qualité. Nous créons un environnement stimulant et inclusif où chaque enfant peut atteindre son plein potentiel, en étroite collaboration avec les familles.</p>
-            <a class="image-box-btn" href="#">Nous rejoindre</a>
+            <button class="image-box-btn" >Nous rejoindre</button>
         </div>
     </section>
 
@@ -55,6 +57,7 @@
             </div>
         </div>
     </section>
+    
     <section class="cards-section">
         <h3>Activités</h3>
         <div class="cards-Activite">
@@ -100,7 +103,41 @@
     <footer>
         &copy; 2025 <span>École Jassani</span> — Tous droits réservés.
     </footer>
-    <script src="script.js" ></script>
+    </div>
+    <div class="form-container">
+    <form>
+        <h3 class="close-btn">X</h3>
+        <h2>Inscription de votre enfant</h2>
 
+        <span class="form-label">Nom de l'enfant</span>
+        <input type="text" id="nom" placeholder="Nom ">
+
+        <span class="form-label">Prénom de l'enfant</span>
+        <input type="text" id="prenom"   placeholder="Prénom ">
+
+        <span class="form-label">Classe de votre enfant</span>
+        <input type="text" id="classe" placeholder="Classe de votre enfant ">
+
+        <span class="form-label">Date de naissance</span>
+        <input type="date" id="date">
+
+        <span class="form-label">Email du parent</span>
+        <input type="email" id="email" placeholder="Email du parent, ex: ema@exemple.com">
+        <span class="form-label">Niveau d'enseignement</span>
+        <div class="select-wrapper">
+            <select id="niveau">
+                <option value="" disabled selected>Choisir un niveau</option>
+                <option value="maternelle">Maternelle</option>
+                <option value="primaire">Primaire</option>
+                <option value="secondaire">Secondaire</option>
+            </select>
+        </div>
+
+        <button class="submit">Inscription</button>
+    </form>
+    </div>
+    <script src="formul.js" ></script>
+       
+ 
 </body>
 </html>
