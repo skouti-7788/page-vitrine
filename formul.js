@@ -1,6 +1,6 @@
 const btn = document.querySelector('.image-box-btn');
 const div = document.querySelector('.form-container');
-const page = document.querySelector('.page-content');
+const page = document.querySelector('.page-home');
        
     
 
@@ -8,12 +8,7 @@ function openForm() {
     div.style.display = 'none';
     btn.addEventListener('click', () => {
         div.style.display = 'block';
-        div.style.position = 'fixed';
-        div.style.top = '2%';
-        div.style.left = '25%';
-        div.style.zIndex = '1000';
         document.body.appendChild(div);
-        
         page.style.filter = 'blur(5px)';
         
     });
@@ -33,6 +28,7 @@ function closeForm() {
     });
 }
 closeForm();
+
 const submit = document.querySelector('.submit');
 function validateForm() {
     const errorMessage = document.createElement('p');
@@ -61,31 +57,51 @@ function validateForm() {
 }
 validateForm();
 
-const menuBtn = document.querySelector('.cotrol');
+const menuBtn = document.querySelector('.control');
+const li = document.querySelectorAll('#menu-li');
+
 const menu = document.querySelector('.menu');
 function toggleMenu() {
-    menuBtn.addEventListener('mouseover', () => {
+    menuBtn.addEventListener('click', () => {
         if (menu.style.display === 'none') {
+            li.forEach(l=>{
+                l.style.listStyle = 'none';
+                l.style.cursor = 'pointer';
+                l.addEventListener('mouseenter',()=>{
+                    // l.style.textDecoration = 'underline red 2px'
+                    l.style.color = 'rgb(155, 79, 60)';
+                });
+                 l.addEventListener('mouseleave',()=>{
+                    // l.style.textDecoration = 'none'
+                    l.style.color = ''
+                });
+            })
+            menu.classList.toggle('menu')
             const styleMenu = {
+                
+                width:"100px",
+                height:'130px',
+                padding:'9px',
                 display : 'block',
                 position :'absolute',
-                top :'60px',
-                right :'20px',
+                top :'50px',
+                right :'10px',
                 zIndex : '1000',
+                display:'flex',
+                flexDirection:'column',
+                gap:'9px',
                 backgroundColor :'rgba(255, 255, 255, 0.9)',
                 border:"1px solid rgba(0, 0, 0, 0.1)",
                 borderRadius :'8px',
             }
             Object.assign(menu.style, styleMenu);
+            
         } else {
             menu.style.display = 'none';
         }
   
     });
-    menuBtn.addEventListener('mouseout', () => {
-        menu.style.display = 'none';
-  
-    });
+   
 
 }
 toggleMenu();  
