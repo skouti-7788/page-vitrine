@@ -78,7 +78,7 @@
 }
 /* image box */
 .image-box-content{
-    background-image:linear-gradient(rgba(0,0,0,0.5)), url(ecole.jpeg);
+    background-image:linear-gradient(rgba(0,0,0,0.5)), url(./image/ecole.jpeg);
     background-size: cover;    
     height:75vh;
     color:rgb(255, 255, 255);
