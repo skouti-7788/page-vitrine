@@ -1,9 +1,7 @@
 const btn = document.querySelector('.image-box-btn');
 const div = document.querySelector('.form-container');
 const page = document.querySelector('.page-home');
-       
-    
-
+//================== style open and close furmule =========================
 function openForm() {
     div.style.display = 'none';
     btn.addEventListener('click', () => {
@@ -28,7 +26,7 @@ function closeForm() {
     });
 }
 closeForm();
-
+//================= validation de formule=================================
 const submit = document.querySelector('.submit');
 function validateForm() {
     const errorMessage = document.createElement('p');
@@ -56,12 +54,12 @@ function validateForm() {
     });
 }
 validateForm();
-
+//============================= responsve menu ==============================
 const menuBtn = document.querySelector('.control');
 const li = document.querySelectorAll('#menu-li');
 
 const menu = document.querySelector('.menu');
-function toggleMenu() {
+function Menu() {
     menuBtn.addEventListener('click', () => {
         if (menu.style.display === 'none') {
             li.forEach(l=>{
@@ -104,4 +102,4 @@ function toggleMenu() {
    
 
 }
-toggleMenu();  
+Menu();  
