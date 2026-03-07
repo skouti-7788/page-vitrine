@@ -27,7 +27,7 @@ function closeForm() {
 }
 closeForm();
 //================= validation de formule=================================
-const submit = document.querySelector('.submit');
+const submit = document.querySelector('#submit');
 function validateForm() {
     const errorMessage = document.createElement('p');
     submit.parentNode.insertBefore(errorMessage,submit);
@@ -49,6 +49,9 @@ function validateForm() {
     }else {
         errorMessage.textContent = '';
 
+    }
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+          console.log('email ne pas vrai')
     }
     
     });

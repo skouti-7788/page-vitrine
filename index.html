@@ -128,22 +128,22 @@
             <h2>Inscription de votre enfant</h2>
         <form>
             <label >Nom de l'enfant</label>
-            <input type="text" id="nom" placeholder="Nom ">
+            <input type="text" id="nom"  placeholder="Nom ">
 
             <label >Prénom de l'enfant</label>
-            <input type="text" id="prenom"   placeholder="Prénom ">
+            <input type="text" id="prenom"    placeholder="Prénom ">
 
             <label >Classe de votre enfant</label>
-            <input type="text" id="classe" placeholder="Classe de votre enfant ">
+            <input type="text" id="classe"   placeholder="Classe de votre enfant ">
 
             <label >Date de naissance</label>
-            <input type="date" id="date">
+            <input type="date" id="date"  >
 
             <label >Email du parent</label>
-            <input type="email" id="email" placeholder="Email du parent, ex: ema@exemple.com">
+            <input type="email" id="email"   placeholder="Email du parent, ex: ema@exemple.com">
             <label class="form-label">Niveau d'enseignement</label>
             <div>
-                <select id="niveau">
+                <select id="niveau" >
                     <option value="" disabled selected>Choisir un niveau</option>
                     <option value="maternelle">Maternelle</option>
                     <option value="primaire">Primaire</option>
@@ -151,11 +151,25 @@
                 </select>
             </div>
 
-            <button class="submit">Inscription</button>
+            <button id="submit"  >Inscription</button>
         </form>
     </div>
-    <script src="formul.js" ></script>
+    <script src="formule.js" ></script>
+    <table border="1" id="table">
+    <thead>
+        <tr>
+            <th>Nom de l'enfant</th>
+            <th>Prénom de l'enfant</th>
+            <th>Classe de votre enfant</th>
+            <th>Date de naissance</th>
+            <th>Email du parent</th>
+            <th>Niveau d'enseignement</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+    <script src="todolist.js" ></script>
        
- 
+   
 </body>
 </html>
